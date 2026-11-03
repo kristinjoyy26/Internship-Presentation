@@ -5435,18 +5435,17 @@ p.slide-lede{
 /* Center Donut Hub */
 .v2-donut-hub{
   position:absolute;
-  width:160px;
-  height:160px;
+  width:168px;
+  height:168px;
   border-radius:50%;
   background:#ffffff;
   border:2.5px solid var(--line-strong);
   display:flex;
-  flex-direction:column;
   align-items:center;
   justify-content:center;
   text-align:center;
   box-shadow:0 10px 30px rgba(66, 8, 13, 0.12), inset 0 2px 6px rgba(255,255,255,0.8);
-  padding:14px;
+  padding:0;
   box-sizing:border-box;
   transition:transform .25s ease, box-shadow .25s ease;
   user-select:none;
@@ -5455,32 +5454,42 @@ p.slide-lede{
   transform:scale(1.04);
   box-shadow:0 14px 36px rgba(189, 39, 50, 0.22);
 }
-.v2-hub-counter{
-  font-family:'Space Grotesk',sans-serif;
-  font-size:11px;
-  font-weight:800;
-  color:var(--crimson);
-  letter-spacing:0.12em;
-  margin-bottom:3px;
-  transition:color .35s ease;
+.v2-hub-yunbao-wrap{
+  width:100%;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  pointer-events:none;
 }
-.v2-hub-cat{
+.v2-hub-yunbao-img{
+  height:124px;
+  width:auto;
+  max-width:86%;
+  object-fit:contain;
+  filter:drop-shadow(0 6px 16px rgba(189, 39, 50, 0.22));
+  transition:transform .3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.v2-donut-hub:hover .v2-hub-yunbao-img{
+  transform:scale(1.05);
+}
+.v2-slice-glyph{
+  transition:opacity .35s cubic-bezier(0.16, 1, 0.3, 1), transform .35s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin:0 0;
+  pointer-events:none;
+}
+.v2-slice-label-text{
   font-family:'Space Grotesk',sans-serif;
-  font-size:17px;
+  font-size:13px;
   font-weight:900;
-  color:var(--maroon-deep);
-  margin:0;
-  letter-spacing:-0.01em;
-  transition:color .35s ease;
-}
-.v2-hub-sub{
-  font-family:'Space Grotesk',sans-serif;
-  font-size:10px;
-  font-weight:700;
-  text-transform:uppercase;
-  letter-spacing:0.08em;
-  color:var(--ink-muted);
-  margin-top:3px;
+  letter-spacing:0.14em;
+  fill:#ffffff;
+  text-anchor:middle;
+  dominant-baseline:central;
+  pointer-events:none;
+  filter:drop-shadow(0 2px 6px rgba(0,0,0,0.45));
+  transition:opacity .35s cubic-bezier(0.16, 1, 0.3, 1), transform .35s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin:0 0;
 }
 
 /* Slide-Up Full Details Panel */
@@ -5493,7 +5502,7 @@ p.slide-lede{
   backdrop-filter:blur(24px);
   -webkit-backdrop-filter:blur(24px);
   overflow-y:auto;
-  padding:54px 32px 100px;
+  padding:36px 28px 60px;
   box-sizing:border-box;
 }
 .v2-detail-panel.open{
@@ -5538,9 +5547,18 @@ p.slide-lede{
 }
 
 .v2-panel-pin{
-  max-width:1380px;
+  max-width:1620px;
   margin:0 auto;
   width:100%;
+  zoom:0.8;
+}
+@supports not (zoom: 0.8){
+  .v2-panel-pin{
+    transform:scale(0.8);
+    transform-origin:top center;
+    width:125%;
+    margin-left:-12.5%;
+  }
 }
 
 /* Header Area */
@@ -5899,18 +5917,17 @@ p.slide-lede{
 /* Center Donut Hub */
 .v2-donut-hub{
   position:absolute;
-  width:160px;
-  height:160px;
+  width:168px;
+  height:168px;
   border-radius:50%;
   background:#ffffff;
   border:2.5px solid var(--line-strong);
   display:flex;
-  flex-direction:column;
   align-items:center;
   justify-content:center;
   text-align:center;
   box-shadow:0 10px 30px rgba(66, 8, 13, 0.12), inset 0 2px 6px rgba(255,255,255,0.8);
-  padding:14px;
+  padding:0;
   box-sizing:border-box;
   transition:transform .25s ease, box-shadow .25s ease;
   user-select:none;
@@ -5919,32 +5936,42 @@ p.slide-lede{
   transform:scale(1.04);
   box-shadow:0 14px 36px rgba(189, 39, 50, 0.22);
 }
-.v2-hub-counter{
-  font-family:'Space Grotesk',sans-serif;
-  font-size:11px;
-  font-weight:800;
-  color:var(--crimson);
-  letter-spacing:0.12em;
-  margin-bottom:3px;
-  transition:color .35s ease;
+.v2-hub-yunbao-wrap{
+  width:100%;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  pointer-events:none;
 }
-.v2-hub-cat{
+.v2-hub-yunbao-img{
+  height:124px;
+  width:auto;
+  max-width:86%;
+  object-fit:contain;
+  filter:drop-shadow(0 6px 16px rgba(189, 39, 50, 0.22));
+  transition:transform .3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.v2-donut-hub:hover .v2-hub-yunbao-img{
+  transform:scale(1.05);
+}
+.v2-slice-glyph{
+  transition:opacity .35s cubic-bezier(0.16, 1, 0.3, 1), transform .35s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin:0 0;
+  pointer-events:none;
+}
+.v2-slice-label-text{
   font-family:'Space Grotesk',sans-serif;
-  font-size:17px;
+  font-size:13px;
   font-weight:900;
-  color:var(--maroon-deep);
-  margin:0;
-  letter-spacing:-0.01em;
-  transition:color .35s ease;
-}
-.v2-hub-sub{
-  font-family:'Space Grotesk',sans-serif;
-  font-size:10px;
-  font-weight:700;
-  text-transform:uppercase;
-  letter-spacing:0.08em;
-  color:var(--ink-muted);
-  margin-top:3px;
+  letter-spacing:0.14em;
+  fill:#ffffff;
+  text-anchor:middle;
+  dominant-baseline:central;
+  pointer-events:none;
+  filter:drop-shadow(0 2px 6px rgba(0,0,0,0.45));
+  transition:opacity .35s cubic-bezier(0.16, 1, 0.3, 1), transform .35s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin:0 0;
 }
 
 
@@ -6100,10 +6127,10 @@ p.slide-lede{
 .v2-exact-grid{
   display:grid;
   grid-template-columns:repeat(4, 1fr);
-  gap:26px;
-  max-width:1380px;
-  margin:0 auto 44px;
-  padding-top:10px;
+  gap:24px;
+  max-width:1620px;
+  margin:0 auto 38px;
+  padding-top:8px;
   align-items:stretch;
 }
 
@@ -6124,14 +6151,14 @@ p.slide-lede{
 .v2-card-modal-overlay{
   position:fixed;
   inset:0;
-  z-index:950;
-  background:rgba(20, 8, 12, 0.78);
+  z-index:980;
+  background:rgba(20, 8, 12, 0.72);
   backdrop-filter:blur(14px);
   -webkit-backdrop-filter:blur(14px);
   display:flex;
   align-items:center;
   justify-content:center;
-  padding:24px;
+  padding:36px 24px;
   box-sizing:border-box;
   opacity:0;
   pointer-events:none;
@@ -6143,33 +6170,32 @@ p.slide-lede{
 }
 .v2-card-modal-dialog{
   background:#ffffff;
-  border-radius:26px;
-  max-width:760px;
+  border-radius:28px;
+  max-width:880px;
   width:100%;
   max-height:86vh;
-  overflow-y:auto;
-  padding:34px 38px 28px;
   box-sizing:border-box;
-  border:2px solid var(--line-strong);
-  box-shadow:0 24px 64px rgba(66, 8, 13, 0.35);
+  border:1.5px solid var(--line-strong);
+  box-shadow:0 24px 64px rgba(66, 8, 13, 0.35), 0 4px 16px rgba(0, 0, 0, 0.08);
   position:relative;
-  transform:translateY(20px) scale(0.96);
+  transform:translateY(16px) scale(0.97);
   transition:transform .3s cubic-bezier(0.16, 1, 0.3, 1);
   display:flex;
   flex-direction:column;
+  overflow:hidden;
 }
 .v2-card-modal-overlay.open .v2-card-modal-dialog{
   transform:translateY(0) scale(1);
 }
 .v2-card-modal-close{
   position:absolute;
-  right:20px;
-  top:20px;
-  width:38px;
-  height:38px;
+  right:26px;
+  top:24px;
+  width:40px;
+  height:40px;
   border-radius:50%;
   border:1.5px solid var(--line-strong);
-  background:#ffffff;
+  background:#FAF6F3;
   color:var(--maroon-deep);
   font-size:24px;
   font-weight:300;
@@ -6177,26 +6203,30 @@ p.slide-lede{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  transition:all .2s ease;
-  box-shadow:0 4px 12px rgba(66, 8, 13, 0.08);
+  transition:all .22s ease;
+  box-shadow:0 3px 10px rgba(66, 8, 13, 0.08);
+  z-index:10;
 }
 .v2-card-modal-close:hover{
   background:var(--crimson);
   color:#ffffff;
-  transform:rotate(90deg);
+  border-color:transparent;
+  transform:rotate(90deg) scale(1.06);
 }
 .v2-card-modal-head{
   display:flex;
-  align-items:center;
+  align-items:flex-start;
   gap:18px;
-  margin-bottom:20px;
-  padding-bottom:18px;
-  border-bottom:1.5px solid rgba(200, 16, 46, 0.14);
+  padding:28px 34px 18px;
+  border-bottom:1.5px solid rgba(200, 16, 46, 0.12);
+  position:relative;
+  flex-shrink:0;
+  background:#ffffff;
 }
 .v2-card-modal-icon{
-  width:54px;
-  height:54px;
-  border-radius:16px;
+  width:56px;
+  height:56px;
+  border-radius:18px;
   background:rgba(200, 16, 46, 0.08);
   color:var(--crimson);
   display:flex;
@@ -6219,7 +6249,7 @@ p.slide-lede{
 }
 .v2-card-modal-title{
   font-family:'Space Grotesk',sans-serif;
-  font-size:24px;
+  font-size:25px;
   font-weight:900;
   color:var(--maroon-deep);
   margin:0;
@@ -6230,14 +6260,32 @@ p.slide-lede{
   color:var(--ink-muted);
   font-weight:600;
   display:block;
-  margin-top:2px;
+  margin-top:3px;
 }
 .v2-card-modal-body{
   flex:1;
+  min-height:0;
+  overflow-y:auto;
+  padding:24px 34px;
   font-size:14.5px;
-  line-height:1.68;
+  line-height:1.7;
   color:var(--ink);
-  padding-right:4px;
+  box-sizing:border-box;
+  scrollbar-width:thin;
+  scrollbar-color:rgba(189, 39, 50, 0.3) transparent;
+}
+.v2-card-modal-body::-webkit-scrollbar{
+  width:6px;
+}
+.v2-card-modal-body::-webkit-scrollbar-track{
+  background:transparent;
+}
+.v2-card-modal-body::-webkit-scrollbar-thumb{
+  background:rgba(189, 39, 50, 0.25);
+  border-radius:6px;
+}
+.v2-card-modal-body::-webkit-scrollbar-thumb:hover{
+  background:rgba(189, 39, 50, 0.5);
 }
 .v2-modal-meta-strip{
   display:flex;
@@ -6336,45 +6384,60 @@ p.slide-lede{
 .v2-modal-tabs{
   display:flex;
   align-items:center;
-  gap:8px;
-  margin-bottom:18px;
-  padding-bottom:12px;
-  border-bottom:1px dashed var(--line);
+  gap:10px;
+  padding:12px 34px;
+  border-bottom:1.5px solid var(--line);
+  background:#FAF6F3;
   overflow-x:auto;
+  overflow-y:hidden;
+  flex-shrink:0;
+  scrollbar-width:none;
+}
+.v2-modal-tabs::-webkit-scrollbar{
+  display:none;
 }
 .v2-modal-tab{
   font-family:'Space Grotesk',sans-serif;
-  font-size:11.5px;
+  font-size:12.5px;
   font-weight:700;
   color:var(--ink-muted);
-  background:rgba(0,0,0,0.04);
-  border:1.5px solid transparent;
-  padding:5px 12px;
-  border-radius:14px;
+  background:#ffffff;
+  border:1.5px solid var(--line-strong);
+  padding:7px 16px;
+  border-radius:18px;
   cursor:pointer;
   transition:all .2s ease;
   white-space:nowrap;
   display:inline-flex;
   align-items:center;
-  gap:6px;
+  gap:8px;
+  flex-shrink:0;
+  line-height:1.2;
 }
 .v2-modal-tab .m-num{
   font-weight:800;
-  font-size:10px;
+  font-size:10.5px;
   color:var(--crimson);
+  background:rgba(189, 39, 50, 0.08);
+  padding:2px 7px;
+  border-radius:10px;
+  transition:all .2s ease;
 }
 .v2-modal-tab:hover{
   border-color:var(--crimson);
   color:var(--crimson);
   background:var(--blush);
+  transform:translateY(-1px);
 }
 .v2-modal-tab.active{
   background:linear-gradient(135deg, var(--maroon-deep), var(--crimson));
   color:#ffffff;
   border-color:transparent;
-  box-shadow:0 2px 8px rgba(189, 39, 50, 0.25);
+  box-shadow:0 3px 10px rgba(189, 39, 50, 0.28);
+  transform:translateY(-1px);
 }
 .v2-modal-tab.active .m-num{
+  background:rgba(255, 255, 255, 0.25);
   color:#ffffff;
 }
 
@@ -6429,11 +6492,12 @@ p.slide-lede{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  margin-top:20px;
-  padding-top:16px;
-  border-top:1px solid var(--line);
+  padding:16px 34px 22px;
+  border-top:1.5px solid var(--line);
+  background:#FAF6F3;
   gap:14px;
   flex-wrap:wrap;
+  flex-shrink:0;
 }
 .v2-modal-hint{
   font-size:12.5px;
@@ -6522,8 +6586,8 @@ p.slide-lede{
   border:1.5px solid var(--line-strong);
   border-radius:24px;
   padding:8px 14px;
-  margin:0 auto 48px;
-  max-width:1380px;
+  margin:0 auto 36px;
+  max-width:1620px;
   box-shadow:0 6px 20px rgba(66, 8, 13, 0.05);
 }
 .v2-card-stepper-tabs{
@@ -8007,12 +8071,13 @@ p.slide-lede{
               <div class="v2-marquee-track">
                 <div class="v2-marquee-img-wrap"><img src="WSI1.jpg" alt="WSI Cadence"></div>
                 <div class="v2-marquee-img-wrap"><img src="WSI2.jpg" alt="WSI Alignment"></div>
+                <div class="v2-marquee-img-wrap"><img src="h56.jpg" alt="WSI Meeting"></div>
                 <div class="v2-marquee-img-wrap"><img src="WSI1.jpg" alt="WSI Cadence"></div>
                 <div class="v2-marquee-img-wrap"><img src="WSI2.jpg" alt="WSI Alignment"></div>
+                <div class="v2-marquee-img-wrap"><img src="h56.jpg" alt="WSI Meeting"></div>
                 <div class="v2-marquee-img-wrap"><img src="WSI1.jpg" alt="WSI Cadence"></div>
                 <div class="v2-marquee-img-wrap"><img src="WSI2.jpg" alt="WSI Alignment"></div>
-                <div class="v2-marquee-img-wrap"><img src="WSI1.jpg" alt="WSI Cadence"></div>
-                <div class="v2-marquee-img-wrap"><img src="WSI2.jpg" alt="WSI Alignment"></div>
+                <div class="v2-marquee-img-wrap"><img src="h56.jpg" alt="WSI Meeting"></div>
               </div>
             </div>
 
@@ -8252,22 +8317,8 @@ p.slide-lede{
        VERSION 2 — SLIDE 5: 04 — SKILLS ACQUIRED (MONTHS 4–6)
        ======================================================= -->
   <section id="v2-skills" class="slide">
-    <!-- Animated Yunbao Mascot Background Elements (Exclusive to this slide on both sides) -->
+    <!-- Ambient Background Elements -->
     <div class="v2-yunbao-bg-layer" aria-hidden="true">
-      <!-- Left Mascot (Cheering / Flying Pose facing center) -->
-      <div class="yunbao-float-item yunbao-left">
-        <div class="yunbao-aura-glow"></div>
-        <img src="yunbao_cutout_5.png" alt="Yunbao Mascot" class="yunbao-img" />
-        <div class="yunbao-floating-cloud"></div>
-      </div>
-
-      <!-- Right Mascot (Greeting / Waving Pose facing center) -->
-      <div class="yunbao-float-item yunbao-right">
-        <div class="yunbao-aura-glow"></div>
-        <img src="yunbao_cutout_1.png" alt="Yunbao Mascot" class="yunbao-img" />
-        <div class="yunbao-floating-cloud"></div>
-      </div>
-
       <!-- Drifting Ambient Huawei Cloud Tech Ring Orbits -->
       <div class="yunbao-tech-orbit orbit-1"></div>
       <div class="yunbao-tech-orbit orbit-2"></div>
@@ -8323,42 +8374,43 @@ p.slide-lede{
               <!-- Sector 2: People (Top-Left, 243° to 357°) -->
               <path class="v2-donut-slice" id="v2Slice2" onclick="setV2SkillCategory(2)" style="cursor:pointer;" />
 
-              <!-- Outer Sector Labels (Hidden when respective sector is highlighted) -->
-              <text x="355" y="126" class="v2-slice-outer-lbl" id="v2SliceLbl0">TECHNICAL</text>
-              <text x="210" y="385" class="v2-slice-outer-lbl" id="v2SliceLbl1">BUSINESS</text>
-              <text x="65" y="126" class="v2-slice-outer-lbl" id="v2SliceLbl2">PEOPLE</text>
-
-              <!-- Icons inside each Sector -->
-              <!-- Tech Icon -->
+              <!-- Sector Content: Icon when normal/inactive, Font label when zoomed in (active) -->
               <g class="v2-slice-icon-group" id="v2Icon0" pointer-events="none">
-                <circle cx="0" cy="0" r="17" fill="rgba(0,0,0,0.28)" />
-                <path d="M-6 -6h12v12h-12z" fill="none" stroke="#ffffff" stroke-width="2" stroke-linejoin="round" />
-                <path d="M-3 -9v3M3 -9v3M-3 6v3M3 6v3M-9 -3h3M-9 3h3M6 -3h3M6 3h3" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" />
-                <circle cx="0" cy="0" r="2" fill="#ffffff" />
+                <g class="v2-slice-glyph" id="v2Glyph0">
+                  <circle cx="0" cy="0" r="17" fill="rgba(0,0,0,0.28)" />
+                  <path d="M-6 -6h12v12h-12z" fill="none" stroke="#ffffff" stroke-width="2" stroke-linejoin="round" />
+                  <path d="M-3 -9v3M3 -9v3M-3 6v3M3 6v3M-9 -3h3M-9 3h3M6 -3h3M6 3h3" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" />
+                  <circle cx="0" cy="0" r="2" fill="#ffffff" />
+                </g>
+                <text class="v2-slice-label-text" id="v2Text0" text-anchor="middle" dominant-baseline="central">TECHNICAL</text>
               </g>
 
-              <!-- Business Icon -->
               <g class="v2-slice-icon-group" id="v2Icon1" pointer-events="none">
-                <circle cx="0" cy="0" r="17" fill="rgba(0,0,0,0.28)" />
-                <path d="M-7 5h14v-9h-14z" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linejoin="round" />
-                <path d="M-3 -4v-3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3" fill="none" stroke="#ffffff" stroke-width="1.8" />
-                <line x1="-7" y1="-1" x2="7" y2="-1" stroke="#ffffff" stroke-width="1.6" />
-                <path d="M-1 -1h2v3h-2z" fill="#ffffff" />
+                <g class="v2-slice-glyph" id="v2Glyph1">
+                  <circle cx="0" cy="0" r="17" fill="rgba(0,0,0,0.28)" />
+                  <path d="M-7 5h14v-9h-14z" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linejoin="round" />
+                  <path d="M-3 -4v-3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3" fill="none" stroke="#ffffff" stroke-width="1.8" />
+                  <line x1="-7" y1="-1" x2="7" y2="-1" stroke="#ffffff" stroke-width="1.6" />
+                  <path d="M-1 -1h2v3h-2z" fill="#ffffff" />
+                </g>
+                <text class="v2-slice-label-text" id="v2Text1" text-anchor="middle" dominant-baseline="central">BUSINESS</text>
               </g>
 
-              <!-- People Icon -->
               <g class="v2-slice-icon-group" id="v2Icon2" pointer-events="none">
-                <circle cx="0" cy="0" r="17" fill="rgba(0,0,0,0.28)" />
-                <circle cx="0" cy="-4" r="4" fill="none" stroke="#ffffff" stroke-width="2" />
-                <path d="M-7 7a7 7 0 0 1 14 0" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
+                <g class="v2-slice-glyph" id="v2Glyph2">
+                  <circle cx="0" cy="0" r="17" fill="rgba(0,0,0,0.28)" />
+                  <circle cx="0" cy="-4" r="4" fill="none" stroke="#ffffff" stroke-width="2" />
+                  <path d="M-7 7a7 7 0 0 1 14 0" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
+                </g>
+                <text class="v2-slice-label-text" id="v2Text2" text-anchor="middle" dominant-baseline="central">PEOPLE</text>
               </g>
             </svg>
 
-            <!-- Center Donut Hole Hub -->
+            <!-- Center Donut Hole Hub (Yunbao alone in the middle) -->
             <div class="v2-donut-hub" id="v2DonutHub" onclick="nextV2Cat()" style="cursor:pointer;" title="Click to view next pillar">
-              <span class="v2-hub-counter" id="v2HubCounter">PILLAR 01 / 03</span>
-              <h4 class="v2-hub-cat" id="v2HubCat">TECHNICAL</h4>
-              <span class="v2-hub-sub" id="v2HubSub">4 CAPABILITIES</span>
+              <div class="v2-hub-yunbao-wrap">
+                <img src="yunbao_halfbody_pose5.png" alt="Yunbao Mascot" class="v2-hub-yunbao-img" />
+              </div>
             </div>
           </div>
         </div>
@@ -8428,7 +8480,7 @@ p.slide-lede{
     <button class="v2-card-modal-close" onclick="closeV2CardModal()" title="Close Window (Esc)">×</button>
     <div class="v2-card-modal-head">
       <div class="v2-card-modal-icon" id="v2ModalIcon"></div>
-      <div>
+      <div style="flex:1; min-width:0; padding-right:48px;">
         <div class="v2-card-modal-tag" id="v2ModalTag">KEY EXECUTION • ACTIONS &amp; DELIVERABLES</div>
         <h3 class="v2-card-modal-title" id="v2ModalTitle">Key Execution</h3>
         <span class="v2-card-modal-event" id="v2ModalEvent">Wordtext Systems, Inc. (WSI) Operations</span>
@@ -11243,7 +11295,9 @@ const eventAndProjectPhotos = [
   { src: "h51.jpg", title: "Team Fellowship & Milestone Celebration", subtitle: "Huawei Cloud Philippines Channel Team", badge: "Channel Sales" },
   { src: "h52.jpg", title: "Huawei Cloud Channel Operations", subtitle: "Partner Business Development Team", badge: "Channel Sales" },
   { src: "h53.jpg", title: "Partner Ecosystem Collaboration", subtitle: "Months 4–6 Field Operations", badge: "Channel Sales" },
-  { src: "h54.jpg", title: "Final Stretch Culmination", subtitle: "300 Hours Completed at Huawei Philippines", badge: "Culmination" }
+  { src: "h54.jpg", title: "Final Stretch Culmination", subtitle: "300 Hours Completed at Huawei Philippines", badge: "Culmination" },
+  { src: "h55.jpg", title: "Enterprise Account Engagement & Partner Alignment", subtitle: "Huawei Cloud Philippines • Channel Sales Immersion", badge: "Channel Sales" },
+  { src: "h56.jpg", title: "WSI Operations & Alignment Meeting", subtitle: "Wordtext Systems, Inc. (WSI) • Weekly Distributor Cadence", badge: "WSI Cadence" }
 ];
 
 // Combine all sources with strict deduplication by src so no photo is ever repeated
@@ -11836,15 +11890,18 @@ function buildV2Panel() {
       <div class="v2-cluster-item">
         <div class="v2-cluster-head">
           <h5 class="v2-cluster-title">Wordtext Systems, Inc. (WSI) Operations &amp; Cadence</h5>
-          <span class="v2-cluster-badge">Weekly Cadence • 2 Photos</span>
+          <span class="v2-cluster-badge">Weekly Cadence • 3 Photos</span>
         </div>
         <p class="v2-cluster-desc">Continuous sales/marketing/tech cadence syncs, distributor pipeline tracking, and partner onboarding.</p>
-        <div class="v2-clickable-photos" style="grid-template-columns:repeat(2, 1fr);">
+        <div class="v2-clickable-photos" style="grid-template-columns:repeat(3, 1fr);">
           <div class="v2-photo-thumb" onclick="openV2ProjectGallery(0, 0, event)" title="WSI Cadence Sync • Click to view full photograph">
             <img src="WSI1.jpg" alt="WSI Cadence">
           </div>
           <div class="v2-photo-thumb" onclick="openV2ProjectGallery(0, 1, event)" title="WSI Alignment • Click to view full photograph">
             <img src="WSI2.jpg" alt="WSI Alignment">
+          </div>
+          <div class="v2-photo-thumb" onclick="openV2ProjectGallery(0, 2, event)" title="WSI Operations Meeting • Click to view full photograph">
+            <img src="h56.jpg" alt="WSI Operations Meeting">
           </div>
         </div>
       </div>
@@ -12208,20 +12265,8 @@ function updateV2SkillUI() {
     `).join('');
   }
 
-  // Center Donut Hub
-  const hubCounter = document.getElementById('v2HubCounter');
-  const hubCat = document.getElementById('v2HubCat');
-  const hubSub = document.getElementById('v2HubSub');
+  // Center Donut Hub (Yunbao Pop Effect on change)
   const hubEl = document.getElementById('v2DonutHub');
-  if (hubCounter) {
-    hubCounter.textContent = 'PILLAR 0' + (curV2CatIdx + 1) + ' / 03';
-    hubCounter.style.color = p.activeColor;
-  }
-  if (hubCat) {
-    hubCat.textContent = p.category.toUpperCase();
-    hubCat.style.color = p.activeColor;
-  }
-  if (hubSub) hubSub.textContent = p.skills.length + ' CAPABILITIES';
   if (hubEl) {
     hubEl.classList.remove('v2-hub-pop');
     void hubEl.offsetWidth; // trigger reflow
@@ -12233,8 +12278,7 @@ function updateV2SkillUI() {
 
   V2_SECTORS.forEach((sec, idx) => {
     const slice = document.getElementById('v2Slice' + idx);
-    const icon = document.getElementById('v2Icon' + idx);
-    const lbl = document.getElementById('v2SliceLbl' + idx);
+    const labelGroup = document.getElementById('v2Icon' + idx);
     const isActive = (idx === curV2CatIdx);
 
     const rOut = isActive ? rOutActive : rOutNormal;
@@ -12247,22 +12291,24 @@ function updateV2SkillUI() {
       slice.style.opacity = isActive ? '1' : '0.58';
     }
 
-    if (icon) {
+    if (labelGroup) {
       const rMid = (rIn + rOut) / 2;
       const iconPos = polarToCartesian(cx, cy, rMid, sec.mid);
-      icon.setAttribute('transform', `translate(${iconPos.x}, ${iconPos.y})`);
-      icon.style.opacity = isActive ? '1' : '0.75';
-    }
+      labelGroup.setAttribute('transform', `translate(${iconPos.x}, ${iconPos.y})`);
+      labelGroup.style.opacity = '1';
 
-    if (lbl) {
-      if (isActive) {
-        lbl.style.opacity = '0';
-        lbl.style.visibility = 'hidden';
-      } else {
-        lbl.style.opacity = '1';
-        lbl.style.visibility = 'visible';
-        lbl.style.fill = 'rgba(100, 116, 139, 0.75)';
-        lbl.style.fontWeight = '700';
+      const glyph = document.getElementById('v2Glyph' + idx);
+      const txt = document.getElementById('v2Text' + idx);
+
+      if (glyph) {
+        glyph.style.opacity = isActive ? '0' : '0.85';
+        glyph.style.visibility = isActive ? 'hidden' : 'visible';
+        glyph.style.transform = isActive ? 'scale(0.5)' : 'scale(1)';
+      }
+      if (txt) {
+        txt.style.opacity = isActive ? '1' : '0';
+        txt.style.visibility = isActive ? 'visible' : 'hidden';
+        txt.style.transform = isActive ? 'scale(1)' : 'scale(0.7)';
       }
     }
   });
@@ -12326,7 +12372,8 @@ function uiV2Carousel() {
 const v2ProjectGalleries = [
   [
     { src: 'WSI1.jpg', title: 'WSI Weekly Cadence & Operations', subtitle: 'Wordtext Systems, Inc. (WSI) • Back-End Distributor Support', badge: 'WSI Operations' },
-    { src: 'WSI2.jpg', title: 'WSI Distributor Alignment Session', subtitle: 'Pipeline Review, MDF & Action Items', badge: 'WSI Enablement' }
+    { src: 'WSI2.jpg', title: 'WSI Distributor Alignment Session', subtitle: 'Pipeline Review, MDF & Action Items', badge: 'WSI Enablement' },
+    { src: 'h56.jpg', title: 'WSI Operations & Alignment Meeting', subtitle: 'Wordtext Systems, Inc. (WSI) • Weekly Distributor Cadence', badge: 'WSI Cadence' }
   ],
   [
     { src: 'SC1.jpg', title: 'VST Partnership Signing Ceremony', subtitle: 'Master of Ceremonies • Program Hosting & Coordination', badge: 'VST Ceremony • SC 1' },
@@ -12394,7 +12441,8 @@ const v2PolaroidPhotos = [
   ...v2ProjectGalleries[2],
   { src: 'h51.jpg', title: 'Team Fellowship & Milestone Celebration', subtitle: 'Huawei Cloud Philippines Channel Team', badge: 'Sept–Oct Memory' },
   { src: 'h53.jpg', title: 'Partner Ecosystem Collaboration', subtitle: 'Months 4–6 Field Operations', badge: 'Sept–Oct Memory' },
-  { src: 'h54.jpg', title: 'Final Stretch Culmination', subtitle: '300 Hours Completed at Huawei Philippines', badge: 'Sept–Oct Memory' }
+  { src: 'h54.jpg', title: 'Final Stretch Culmination', subtitle: '300 Hours Completed at Huawei Philippines', badge: 'Sept–Oct Memory' },
+  { src: 'h55.jpg', title: 'Enterprise Account Engagement & Partner Alignment', subtitle: 'Huawei Cloud Philippines • Channel Sales Immersion', badge: 'Sept–Oct Memory' }
 ];
 function openV2PolaroidLightbox(idx, e) {
   if (e) e.stopPropagation();
